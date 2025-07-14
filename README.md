@@ -43,3 +43,26 @@ mvn clean install
 
 # Run the application
 mvn spring-boot:run
+
+File Structure
+employee-manager-backend/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/example/employeemanager/
+│   │   │       ├── controller/            # Contains REST controllers
+│   │   │       │   └── EmployeeController.java
+│   │   │       ├── model/                 # Entity classes (JPA)
+│   │   │       │   └── Employee.java
+│   │   │       ├── repository/            # Repository interfaces (DAO)
+│   │   │       │   └── EmployeeRepository.java
+│   │   │       ├── service/               # Business logic / services
+│   │   │       │   └── EmployeeService.java
+│   │   │       └── exception/             # Custom exceptions and handlers
+│   │   │           ├── EmployeeNotFoundException.java
+│   │   │           └── EmailAlreadyExistsException.java
+│   │   └── resources/
+│   │       ├── application.properties     # App config file
+│   │       └── static/                    # Optional: For static files
+│   │       └── templates/                 # Optional: For Thymeleaf (if used)
+└── pom.xml                                # Maven dependencies
